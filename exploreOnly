@@ -1,0 +1,16 @@
+import random
+
+H = [10,15,12]
+D = [8, 6, 5]
+
+
+def exploreOnly():
+    Happy = 0
+
+    for i in range(0, 100):
+        Happy1 = random.normalvariate(H[0], D[0])
+        Happy2 = random.normalvariate(H[1], D[1])
+        Happy3 = random.normalvariate(H[2], D[2])
+        Happy = Happy +  Happy1 + Happy2 + Happy3
+
+    return Happy
