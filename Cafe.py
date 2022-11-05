@@ -11,7 +11,6 @@ class Cafe():
     def visit(self):
         happiness = random.normalvariate(self.avg_hpp, self.std_dev)
         self.visit_history.append(happiness)
-        return happiness
 
     @classmethod
     def max_happiness_of(cls, cafes:list):
