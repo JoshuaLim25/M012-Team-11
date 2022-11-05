@@ -8,7 +8,7 @@ class Cafe():
         self.visit_history = []
 
 
-    def visit(self) -> float:
+    def visit(self):
         happiness = random.normalvariate(self.avg_hpp, self.std_dev)
         self.visit_history.append(happiness)
         return happiness
@@ -24,7 +24,7 @@ class Cafe():
             if sum(cafe.visit_history) > sum(best.visit_history):
                 best = cafe
 
-        return cafe
+        return best
 
     @classmethod
     def total_hap_of(cls, cafes:list):
@@ -32,8 +32,5 @@ class Cafe():
         :param cafes: a list of cafes (class Cafe)
         :return: total happiness of all cafes
         """
-        s = 0.0
-        for cafe in cafes:
-            s += sum(cafe.visit_history)
 
-        return s
+        return sum([sum(cafe.visit_history) for cafe in cafes])
