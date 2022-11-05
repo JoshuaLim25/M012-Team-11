@@ -13,9 +13,7 @@ def eGreedy(e=10):
         most_hap = Cafe.max_happiness_of([cafe1, cafe2, cafe3])
         goto = randint(0, 100)
         if goto <= e:
-            gt = randint(0, 2)
-            while [cafe1, cafe2, cafe3][gt] is most_hap:
-                gt = randint(0, 2)
+            gt = ran
             [cafe1, cafe2, cafe3][gt].visit()
         elif goto > e:
             most_hap.visit()
