@@ -13,14 +13,15 @@ class Cafe():
         self.visit_history.append(happiness)
 
     @classmethod
-    def max_happiness_of(cls, cafes:list):
+    def max_avg_happiness_of(cls, cafes:list):
         """
         :param cafes: a list of cafes (class Cafe)
         :return: cafe with the most total happiness
         """
         best = cafes[0]
         for cafe in cafes:
-            if sum(cafe.visit_history) > sum(best.visit_history):
+            if (sum(cafe.visit_history)/len(cafe.visit_history)) \
+                    > (sum(best.visit_history)/len(cafe.visit_history)):
                 best = cafe
 
         return best

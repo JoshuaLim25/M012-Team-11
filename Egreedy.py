@@ -1,3 +1,5 @@
+import random
+
 from Cafe import Cafe
 from random import randint
 
@@ -10,10 +12,10 @@ def eGreedy(e=10):
     cafe3.visit()
 
     for _ in range(297):
-        most_hap = Cafe.max_happiness_of([cafe1, cafe2, cafe3])
+        most_hap = Cafe.max_avg_happiness_of([cafe1, cafe2, cafe3])
         goto = randint(0, 100)
         if goto <= e:
-            gt = ran
+            gt = randint(0, 2)
             [cafe1, cafe2, cafe3][gt].visit()
         elif goto > e:
             most_hap.visit()
