@@ -10,10 +10,13 @@ Expected total happiness = avg happiness * the num of times the cafe was visited
 
 Expected regret
     Optimum Happiness - expected total happines
+    for each func
 
 
 Average total happines = the one we get after running the functions
 
 
-Average regret = Optimal happiness - average total happiness
+Average regret = Optimum happiness - average total happiness
+                 or
+                 Expected total happiness - average total happiness
 """
