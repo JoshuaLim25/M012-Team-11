@@ -17,6 +17,4 @@ Average total happines = the one we get after running the functions
 
 
 Average regret = Optimum happiness - average total happiness
-                 or
-                 Expected total happiness - average total happiness
 """
